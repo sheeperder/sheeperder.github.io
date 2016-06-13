@@ -13,11 +13,11 @@
 
     <title>
         
-          Hello World - Artisticoder&#39;s Blog
+          Android  naming conventions - Artisticoder&#39;s Blog
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/2016/06/07/hello-world/">
+    <link rel="canonical" href="http://yoursite.com/2016/06/09/android-naming-conventions/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -149,11 +149,11 @@
                     <div class="tags">
                         
                     </div>
-                    <h1>Hello World</h1>
-                    <h2 class="subheading">undefined</h2>
+                    <h1>Android  naming conventions</h1>
+                    <h2 class="subheading">编码规范是泯灭程序员个性的一项制度，但对于整个团队而言，却是一件利器。它能让代码整齐有序，任何人都能接受其他人的工作，而不会因为代码风格迥异而花费过多的时间</h2>
                     <span class="meta">
-                        Posted by Sheeperder on
-                        2016-06-07
+                        Posted by sheeperder on
+                        2016-06-09
                     </span>
                 </div>
             </div>
@@ -172,15 +172,125 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+                <p>代码是程序员的第二张脸。<br>每个程序员在嘲笑别人代码的同时，有没想过自己的代码也会成为别人的谈资呢？<br>无规矩不成方圆。<br>以下是我对Android项目中一些命名规范的整理。</p>
+<h4 id="Java类文件命名规范"><a href="#Java类文件命名规范" class="headerlink" title="Java类文件命名规范"></a>Java类文件命名规范</h4><ul>
+<li>Activity命名规范：以Activity作为后缀</li>
+<li>Adapter命令规范：以Adapter作为后缀</li>
+<li>Entity命名规范：大多以Entity作为后缀。全局变量，比如User，不受此约束</li>
+</ul>
+<h4 id="资源文件命名规范"><a href="#资源文件命名规范" class="headerlink" title="资源文件命名规范"></a>资源文件命名规范</h4><ul>
+<li>layout目录下的文件命名规范<ul>
+<li>页面布局文件。Activity的以act<em>作为后缀，Fragment的以frg</em>作为前缀</li>
+<li>列表控件中的item布局文件。以item_作为固定前缀，功能模块作为后缀，均小写</li>
+<li>Dialog布局文件。以dlg_作为固定前缀，dialog的功能名称作为后缀，均小写</li>
+<li>PopupWindow布局文件。以ppw_作为前缀，popupwindow的功能名称作为后缀，均小写</li>
+<li>include布局文件。以include_作为前缀，功能名称作为后缀，均小写</li>
+<li>对于在java代码中加载的自定义布局文件。以layout_作为前缀，功能名称作为后缀</li>
+</ul>
+</li>
+<li>drawable目录下文件命名规范，Drawable目录下的资源，大部分是图片，此外还有部分xml文件，用户Selector。但无论是图片还是xml文件，都应该遵循下述命名规范<ul>
+<li>对于只在一个页面使用的资源，就以该页面的名称作为前缀</li>
+<li>对于在一个模块下多个页面使用的资源，就以该模块的名称作为前缀</li>
+<li>对于在各个模块、各个页面都有可能使用的资源，就以common_作为前缀</li>
+</ul>
+</li>
+<li>anim目录下的文件命名规范<ul>
+<li>前缀遵循drawable规范，且均小写</li>
+<li>前缀后为动画类型，再后面为方向。e.g,common_fade_in</li>
+</ul>
+</li>
+</ul>
+<h4 id="Java类中控件对象的命名规范"><a href="#Java类中控件对象的命名规范" class="headerlink" title="Java类中控件对象的命名规范"></a>Java类中控件对象的命名规范</h4><pre><code>控件类型缩写 + 控件的逻辑名称（首字母大写）
+</code></pre><p><strong>常用控件缩写</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">控件</th>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">控件</th>
+<th style="text-align:center">缩写</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">LinearLayout</td>
+<td style="text-align:center">ll</td>
+<td style="text-align:center">RelativeLayout</td>
+<td style="text-align:center">rl</td>
+</tr>
+<tr>
+<td style="text-align:center">FrameLayout</td>
+<td style="text-align:center">fl</td>
+<td style="text-align:center">EditText</td>
+<td style="text-align:center">edt</td>
+</tr>
+<tr>
+<td style="text-align:center">TextView</td>
+<td style="text-align:center">tv</td>
+<td style="text-align:center">TimePicker</td>
+<td style="text-align:center">tp</td>
+</tr>
+<tr>
+<td style="text-align:center">Button</td>
+<td style="text-align:center">btn</td>
+<td style="text-align:center">ProgressBar</td>
+<td style="text-align:center">pb</td>
+</tr>
+<tr>
+<td style="text-align:center">ImageButton</td>
+<td style="text-align:center">img</td>
+<td style="text-align:center">WebView</td>
+<td style="text-align:center">wv</td>
+</tr>
+<tr>
+<td style="text-align:center">CheckBox</td>
+<td style="text-align:center">chk</td>
+<td style="text-align:center">RantingBar</td>
+<td style="text-align:center">rb</td>
+</tr>
+<tr>
+<td style="text-align:center">GridView</td>
+<td style="text-align:center">gv</td>
+<td style="text-align:center">ListView</td>
+<td style="text-align:center">lv</td>
+</tr>
+<tr>
+<td style="text-align:center">RadioButton</td>
+<td style="text-align:center">rb</td>
+<td style="text-align:center">DatePicker</td>
+<td style="text-align:center">dp</td>
+</tr>
+<tr>
+<td style="text-align:center">RadioGroup</td>
+<td style="text-align:center">rg</td>
+<td style="text-align:center">ImageView</td>
+<td style="text-align:center">iv</td>
+</tr>
+<tr>
+<td style="text-align:center">ViewPager</td>
+<td style="text-align:center">vp</td>
+<td style="text-align:center">ScrollView</td>
+<td style="text-align:center">scv</td>
+</tr>
+<tr>
+<td style="text-align:center">View</td>
+<td style="text-align:center">v</td>
+<td style="text-align:center">Include</td>
+<td style="text-align:center">icd</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Layout中控件对象的命名规范"><a href="#Layout中控件对象的命名规范" class="headerlink" title="Layout中控件对象的命名规范"></a>Layout中控件对象的命名规范</h4><pre><code>控件类型缩写 + 模块名称 + 逻辑名称，以下划线分隔，均小写
+</code></pre><h4 id="strings-xml中常量的命名规范"><a href="#strings-xml中常量的命名规范" class="headerlink" title="strings.xml中常量的命名规范"></a>strings.xml中常量的命名规范</h4><p>大多在Layout中的控件上使用，所以以该常量所在的Activity名称作为前缀，后面接控件名称，再后面自由发挥。<br>e.g,登陆页面的登陆按钮上显示的文字，就可以命名为：login_btnLogin_text</p>
+<p>另一种使用场景则是在Java代码中使用，可能出现在Activity中，也可能出现在工具类Utils中，这时候，如果是和具体Activity相关，那么规则和上面的一样，以所在的Activity名称作为前缀，如果涉及和公共模块和控件相关，就以common_作为前缀</p>
+<p>string.xml的规则可以灵活些。甚至可以将其按照模块拆分为多个strings文件，只要resoures标签下都是string标签就行，编译打包时会自动将同类文件进行合并。<br>e.g,strings_module_a.xml,strings_module_b.xml</p>
+<p>好处是，各个模块维护各自的strings.xml。但为常量命名时一定要以模块名称作为前缀，不然很容易产生重名的情况，进而导致编译出错</p>
+<h4 id="常量命名"><a href="#常量命名" class="headerlink" title="常量命名"></a>常量命名</h4><pre><code>遵守Java的命名规范，即只能包含字母和下划线_，字母全部大写单词之间用下划线_隔开
+</code></pre><p>命名规范的作用在于：</p>
+<ul>
+<li>好的文件命名规范，让几千个文件分门别类的放在好的位置</li>
+<li>好的对象命名规范，让这个项目的代码风格整齐一致</li>
+</ul>
 
 
                 <hr>
