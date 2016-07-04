@@ -174,24 +174,25 @@
 
                 <p>代码是程序员的第二张脸。<br>每个程序员在嘲笑别人代码的同时，有没想过自己的代码也会成为别人的谈资呢？<br>无规矩不成方圆。<br>以下是我对Android项目中一些命名规范的整理。</p>
 <h4 id="Java类文件命名规范"><a href="#Java类文件命名规范" class="headerlink" title="Java类文件命名规范"></a>Java类文件命名规范</h4><ul>
-<li>Activity命名规范：以Activity作为后缀</li>
-<li>Adapter命令规范：以Adapter作为后缀</li>
+<li>Activity命名规范：以Activity作为后缀,如：逻辑名称+Activity</li>
+<li>Adapter命令规范：以Adapter作为后缀，如：逻辑名称+Adapter</li>
 <li>Entity命名规范：大多以Entity作为后缀。全局变量，比如User，不受此约束</li>
 </ul>
 <h4 id="资源文件命名规范"><a href="#资源文件命名规范" class="headerlink" title="资源文件命名规范"></a>资源文件命名规范</h4><ul>
 <li>layout目录下的文件命名规范<ul>
-<li>页面布局文件。Activity的以act<em>作为后缀，Fragment的以frg</em>作为前缀</li>
-<li>列表控件中的item布局文件。以item_作为固定前缀，功能模块作为后缀，均小写</li>
-<li>Dialog布局文件。以dlg_作为固定前缀，dialog的功能名称作为后缀，均小写</li>
-<li>PopupWindow布局文件。以ppw_作为前缀，popupwindow的功能名称作为后缀，均小写</li>
-<li>include布局文件。以include_作为前缀，功能名称作为后缀，均小写</li>
-<li>对于在java代码中加载的自定义布局文件。以layout_作为前缀，功能名称作为后缀</li>
+<li>页面布局文件。Activity的以act<em>作为前缀，Fragment的以frg</em>作为前缀，如：act_逻辑名称</li>
+<li>列表控件中的item布局文件。以item_作为固定前缀，功能模块作为后缀，均小写，如：item_news</li>
+<li>Dialog布局文件。以dlg_作为固定前缀，dialog的功能名称作为后缀，均小写，如：dlg_loading</li>
+<li>PopupWindow布局文件。以ppw_作为前缀，popupwindow的功能名称作为后缀，均小写，如：ppw_exit</li>
+<li>include布局文件。以include_作为前缀，功能名称作为后缀，均小写，如include_title</li>
+<li>对于在java代码中加载的自定义布局文件。以layout_作为前缀，功能名称作为后缀，如layout_userInfo</li>
 </ul>
 </li>
 <li>drawable目录下文件命名规范，Drawable目录下的资源，大部分是图片，此外还有部分xml文件，用户Selector。但无论是图片还是xml文件，都应该遵循下述命名规范<ul>
-<li>对于只在一个页面使用的资源，就以该页面的名称作为前缀</li>
-<li>对于在一个模块下多个页面使用的资源，就以该模块的名称作为前缀</li>
-<li>对于在各个模块、各个页面都有可能使用的资源，就以common_作为前缀</li>
+<li>对于只在一个页面使用的资源，就以该页面的名称作为前缀，如：login_bg</li>
+<li>对于在一个模块下多个页面使用的资源，就以该模块的名称作为前缀,如：setting_save</li>
+<li>对于在各个模块、各个页面都有可能使用的资源，就以common_作为前缀,如：common_back</li>
+<li>常见的前缀:selector<em>逻辑名称，shape</em>逻辑名称</li>
 </ul>
 </li>
 <li>anim目录下的文件命名规范<ul>
@@ -200,6 +201,55 @@
 </ul>
 </li>
 </ul>
+<p><strong>常用名词缩写</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">缩写</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">icon</td>
+<td style="text-align:center">ic</td>
+<td style="text-align:center">divider</td>
+<td style="text-align:center">di</td>
+</tr>
+<tr>
+<td style="text-align:center">background</td>
+<td style="text-align:center">bg</td>
+<td style="text-align:center">error</td>
+<td style="text-align:center">err</td>
+</tr>
+<tr>
+<td style="text-align:center">image</td>
+<td style="text-align:center">img</td>
+<td style="text-align:center">selector</td>
+<td style="text-align:center">sl</td>
+</tr>
+<tr>
+<td style="text-align:center">shapre</td>
+<td style="text-align:center">sp</td>
+<td style="text-align:center">selected</td>
+<td style="text-align:center">sel</td>
+</tr>
+<tr>
+<td style="text-align:center">normal</td>
+<td style="text-align:center">nor</td>
+<td style="text-align:center">password</td>
+<td style="text-align:center">pwd</td>
+</tr>
+<tr>
+<td style="text-align:center">delete</td>
+<td style="text-align:center">del</td>
+<td style="text-align:center">infomation</td>
+<td style="text-align:center">info</td>
+</tr>
+</tbody>
+</table>
 <h4 id="Java类中控件对象的命名规范"><a href="#Java类中控件对象的命名规范" class="headerlink" title="Java类中控件对象的命名规范"></a>Java类中控件对象的命名规范</h4><pre><code>控件类型缩写 + 控件的逻辑名称（首字母大写）
 </code></pre><p><strong>常用控件缩写</strong></p>
 <table>
@@ -283,7 +333,7 @@
 <h4 id="Layout中控件对象的命名规范"><a href="#Layout中控件对象的命名规范" class="headerlink" title="Layout中控件对象的命名规范"></a>Layout中控件对象的命名规范</h4><pre><code>控件类型缩写 + 模块名称 + 逻辑名称，以下划线分隔，均小写
 </code></pre><h4 id="strings-xml中常量的命名规范"><a href="#strings-xml中常量的命名规范" class="headerlink" title="strings.xml中常量的命名规范"></a>strings.xml中常量的命名规范</h4><p>大多在Layout中的控件上使用，所以以该常量所在的Activity名称作为前缀，后面接控件名称，再后面自由发挥。<br>e.g,登陆页面的登陆按钮上显示的文字，就可以命名为：login_btnLogin_text</p>
 <p>另一种使用场景则是在Java代码中使用，可能出现在Activity中，也可能出现在工具类Utils中，这时候，如果是和具体Activity相关，那么规则和上面的一样，以所在的Activity名称作为前缀，如果涉及和公共模块和控件相关，就以common_作为前缀</p>
-<p>string.xml的规则可以灵活些。甚至可以将其按照模块拆分为多个strings文件，只要resoures标签下都是string标签就行，编译打包时会自动将同类文件进行合并。<br>e.g,strings_module_a.xml,strings_module_b.xml</p>
+<p>string.xml的规则可以灵活些。甚至可以将其按照模块拆分为多个strings文件，只要resoures标签下都是strings标签就行，编译打包时会自动将同类文件进行合并。<br>e.g,strings_module_a.xml,strings_module_b.xml</p>
 <p>好处是，各个模块维护各自的strings.xml。但为常量命名时一定要以模块名称作为前缀，不然很容易产生重名的情况，进而导致编译出错</p>
 <h4 id="常量命名"><a href="#常量命名" class="headerlink" title="常量命名"></a>常量命名</h4><pre><code>遵守Java的命名规范，即只能包含字母和下划线_，字母全部大写单词之间用下划线_隔开
 </code></pre><p>命名规范的作用在于：</p>
